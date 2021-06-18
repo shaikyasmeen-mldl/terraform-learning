@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "my-vpc"
+  name = "yasmeen-vpc"
   cidr = "10.0.0.0/16"
 
   azs             = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
@@ -15,4 +15,9 @@ module "vpc" {
     Terraform = "true"
     Environment = "dev"
   }
+}
+  
+provider "aws" {
+  profile = "default"
+  region  = "us-east-1"
 }

@@ -1,10 +1,9 @@
-
 resource "aws_s3_bucket" "b" {
-  bucket = ""
+  bucket = "my-yasmeen-test-bucket"
   acl    = "private"
 
   tags = {
-    Name        = "yyasu7"
+    Name        = "yasuu-bucket"
     Environment = "Dev"
   }
 }
